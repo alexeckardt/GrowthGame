@@ -16,10 +16,10 @@ tile_data = PoolIntArray( -3, 9, 0, -2, 9, 0, -1, 9, 0, -65536, 9, 0, -65535, 9,
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 139, 115 )
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2( -1, -1 )
+current = true
+
 [node name="Playerstatic" type="Sprite" parent="."]
 position = Vector2( 83, 88 )
 texture = ExtResource( 2 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 139, 115 )
-current = true

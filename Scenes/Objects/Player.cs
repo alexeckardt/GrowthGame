@@ -6,7 +6,7 @@ public class Player : KinematicBody2D
 	// Declare member variables here. Examples:
 	// private int a = 2;dddd
 	// private string b = "text";
-	private float MoveSpeed = 1.25f;
+	private float MoveSpeed = 2f;
 	
 
 	// Called when the node enters the scene tree for the first time.
@@ -20,10 +20,10 @@ public class Player : KinematicBody2D
 	{
 		//Get Move Input
 		Vector2 input = inputVec();
-		Vector2 velocity = new Vector2();
+		//Vector2 velocity = new Vector2();
 		
 		//Move
-		var collision = this.MoveAndCollide(input * MoveSpeed * delta);
+		var collision = this.MoveAndCollide(input * MoveSpeed);
 		
 		GD.Print(this.Position);
 	}
@@ -44,6 +44,6 @@ public class Player : KinematicBody2D
 		if (down) input.y += 1;
 		
 		//return
-		return input;
+		return input.Normalized();
 	}
 }
