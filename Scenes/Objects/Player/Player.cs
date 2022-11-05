@@ -3,16 +3,17 @@ using System;
 
 public class Player : KinematicBody2D
 {
-	// Declare member variables here. Examples:
-	// private int a = 2;dddd
-	// private string b = "text";
+	//Instance Variables
 	private float MoveSpeed = 200f;
+	private float acceleration = 0.45f; //Should ONLY be [0, 1]
 	
+	//Velocity
+	private Vector2 velocity;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		
+		this.velocity = new Vector2();
 	}
 
   // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -20,12 +21,18 @@ public class Player : KinematicBody2D
 	{
 		//Get Move Input
 		Vector2 input = inputVec();
-		//Vector2 velocity = new Vector2();
+
+		//Enterpolate Velocity
+		//Lower "Acceleration" makes player feel more slippery
+		Vector2 g = input * MoveSpeed;
+		velocity = velocity.LinearInterpolate(g, acceleration);
+
+		//Move + Get The Updated Velocity
+		velocity = this.MoveAndSlide(velocity);
 		
-		//Move
-		var collision = this.MoveAndCollide(input * MoveSpeed * delta);
 		
-		GD.Print(this.Position);
+		//Output
+		GD.Print(this.velocity);
 	}
 	
 	public Vector2 inputVec() {
