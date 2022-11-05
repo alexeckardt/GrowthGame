@@ -1,0 +1,9 @@
+C:\Users\Alex\Documents\Godot\GrowthGameJam\.mono\temp\obj\Debug\GrowthGameJam.csproj.AssemblyReference.cache
+C:\Users\Alex\Documents\Godot\GrowthGameJam\.mono\temp\obj\Debug\GrowthGameJam.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alex\Documents\Godot\GrowthGameJam\.mono\temp\obj\Debug\GrowthGameJam.AssemblyInfoInputs.cache
+C:\Users\Alex\Documents\Godot\GrowthGameJam\.mono\temp\obj\Debug\GrowthGameJam.AssemblyInfo.cs
+C:\Users\Alex\Documents\Godot\GrowthGameJam\.mono\temp\obj\Debug\GrowthGameJam.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Documents\Godot\GrowthGameJam\.mono\temp\bin\Debug\GrowthGameJam.dll
+C:\Users\Alex\Documents\Godot\GrowthGameJam\.mono\temp\bin\Debug\GrowthGameJam.pdb
+C:\Users\Alex\Documents\Godot\GrowthGameJam\.mono\temp\obj\Debug\GrowthGameJam.dll
+C:\Users\Alex\Documents\Godot\GrowthGameJam\.mono\temp\obj\Debug\GrowthGameJam.pdb
