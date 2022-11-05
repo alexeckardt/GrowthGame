@@ -28,9 +28,8 @@ public class Player : KinematicBody2D
 		velocity = velocity.LinearInterpolate(g, acceleration);
 
 		//Move + Get The Updated Velocity
-		velocity = this.MoveAndSlide(velocity);
-		
-		
+		velocity = this.SnapVelocity(this.MoveAndSlide(velocity));
+
 		//Output
 		GD.Print(this.velocity);
 	}
@@ -53,4 +52,7 @@ public class Player : KinematicBody2D
 		//return
 		return input.Normalized();
 	}
+
+	//Don't Do Weird 1.3245e-5 stuff in the velocity (don't move by neglageble amount)
+	private Vector2 SnapVelocity(Vector2 v) => new Vector2((Math.Abs(v.x) < 0.001) ? 0 : v.x, (Math.Abs(v.y) < 0.001) ? 0 : v.y);
 }
